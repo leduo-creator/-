@@ -1,0 +1,140 @@
+/* Basic Reset */
+body, h1, h2, p, a, button, label, select, div, section, main, header, footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Use a clean sans-serif font, potentially a web font like Roboto */
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333; /* Dark gray text */
+    /* Subtle industrial background - light gray */
+    background-color: #e8e8e8;
+    padding-top: 30px; /* More space at the top */
+}
+
+.container {
+    max-width: 1000px; /* Slightly wider container */
+    margin: 30px auto; /* More margin */
+    padding: 0 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px; /* More space below header */
+}
+
+.site-title {
+    /* Strong, dark color for the main title */
+    color: #222;
+    margin-bottom: 15px;
+    font-size: 3em; /* Larger title */
+    font-weight: 700; /* Bold font weight */
+    /* Optional: subtle text shadow for depth */
+    /* text-shadow: 1px 1px 2px rgba(0,0,0,0.1); */
+}
+
+/* Sections - Clean, bordered look */
+section {
+    background-color: #fff; /* White background for content */
+    padding: 30px; /* More padding */
+    margin-bottom: 30px;
+    /* Industrial border instead of shadow */
+    border: 1px solid #ccc;
+    border-radius: 0; /* Sharp corners */
+    /* Optional: subtle shadow */
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.1); */
+}
+
+.main-calculator-link h2,
+.calculator-types-list h2 {
+    /* Darker color for section titles */
+    color: #444;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    /* Optional: bottom border for title */
+    /* border-bottom: 1px solid #eee; */
+    /* padding-bottom: 10px; */
+}
+
+/* Individual Calculator Entry */
+.calculator-entry {
+    margin-bottom: 25px; /* More space between entries */
+    padding-bottom: 25px;
+    /* Stronger separator line */
+    border-bottom: 2px dashed #ddd; /* Dashed line for industrial feel */
+}
+
+.calculator-entry:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.calculator-entry h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #555; /* Slightly lighter color for sub-titles */
+    font-weight: 700;
+    text-align: left;
+}
+
+.calculator-entry p {
+    margin-bottom: 15px;
+    color: #666; /* Lighter text for descriptions */
+}
+
+/* Buttons - Solid, functional look */
+.calculator-button {
+    display: inline-block;
+    /* Muted industrial color - dark blue-gray */
+    background-color: #556270;
+    color: #fff;
+    padding: 12px 25px; /* More padding */
+    border-radius: 3px; /* Slightly rounded corners */
+    text-decoration: none;
+    font-size: 1.1rem; /* Slightly larger font */
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    /* Optional: subtle text shadow on button */
+    /* text-shadow: 1px 1px 1px rgba(0,0,0,0.1); */
+}
+
+.calculator-button:hover {
+    background-color: #4a5562; /* Darker shade on hover */
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px; /* More space above footer */
+    padding: 25px;
+    background-color: #222; /* Dark footer */
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 2em;
+    }
+    .main-calculator-link h2,
+    .calculator-types-list h2 {
+        font-size: 1.8em;
+    }
+    .calculator-entry h2 {
+        font-size: 1.3em;
+    }
+    .container {
+        padding: 0 15px;
+    }
+    section {
+        padding: 20px;
+    }
+}
