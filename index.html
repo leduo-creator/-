@@ -3,80 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asphalt Calculator - Calculate Asphalt Material, Cost, and Conversions</title>
-    <meta name="description" content="Use our free online asphalt calculator to estimate material quantity, paving cost, and perform unit conversions for your asphalt projects.">
+    <title>Asphalt Calculator - Precise Material, Cost & Conversion Tools</title> <!-- 更具吸引力的标题 -->
+    <meta name="description" content="Get precise asphalt material quantity, paving cost estimates, and perform unit conversions with our comprehensive online asphalt calculator suite. Your go-to tool for asphalt projects."> <!-- 更详细、包含更多关键词的描述 -->
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <!-- Link to Google Font - Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Add other SEO meta tags as needed -->
 </head>
 <body>
 
-    <header>
-        <h1 class="site-title">Asphalt Calculator</h1>
-        <!-- Optional: Add a brief introductory paragraph about the site's purpose -->
+    <header class="site-header">
+        <div class="container header-content">
+            <!-- Logo Placeholder -->
+            <div class="site-logo">
+                <!-- Replace with your actual logo image -->
+                <img src="/path/to/your/logo.png" alt="Asphalt Calculator Logo">
+                <!-- Or use text/SVG logo -->
+                <!-- <span>Your Logo</span> -->
+            </div>
+            <div class="site-branding">
+                 <h1 class="site-title">Asphalt Calculator</h1>
+                 <!-- Value Proposition / Tagline -->
+                 <p class="site-tagline">Your Comprehensive Toolkit for Asphalt Project Estimation</p>
+            </div>
+        </div>
     </header>
 
     <main class="container">
 
-        <!-- Section for Main Calculator Link (Optional, but good to highlight) -->
-        <section class="main-calculator-link">
-            <h2>Main Asphalt Material Calculator</h2>
-            <p>Calculate the exact amount of asphalt needed for your project based on area and thickness. Supports various units like square feet, square yards, and cubic meters.</p>
-            <a href="/main-asphalt-calculator" class="calculator-button">Go to Main Calculator</a>
-            <!-- Link to your core, most comprehensive calculator page -->
+        <!-- Embedded Main Asphalt Material Calculator -->
+        <section class="asphalt-calculator-form">
+            <h2>Calculate Asphalt Material Needed</h2>
+            <p class="section-description">Enter your project dimensions to estimate the exact amount of asphalt required in tons. Supports various units.</p>
+
+            <!-- Calculator Form - Basic Structure (Needs JS for calculation logic) -->
+            <div class="calculator-inputs">
+                <div class="input-group">
+                    <label for="length">Length:</label>
+                    <input type="number" id="length" placeholder="e.g., 100" required>
+                    <select id="length-unit">
+                        <option value="feet">Feet</option>
+                        <option value="meters">Meters</option>
+                        <option value="yards">Yards</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="width">Width:</label>
+                    <input type="number" id="width" placeholder="e.g., 12" required>
+                     <select id="width-unit">
+                        <option value="feet">Feet</option>
+                        <option value="meters">Meters</option>
+                        <option value="yards">Yards</option>
+                    </select>
+                </div>
+                 <div class="input-group">
+                    <label for="thickness">Thickness:</label>
+                    <input type="number" id="thickness" placeholder="e.g., 4" required>
+                     <select id="thickness-unit">
+                        <option value="inches">Inches</option>
+                        <option value="feet">Feet</option>
+                        <option value="meters">Meters</option>
+                        <option value="yards">Yards</option>
+                        <option value="cm">CM</option>
+                    </select>
+                </div>
+                <!-- Optional: Add input for Asphalt Density if you want to make it more advanced -->
+                 <div class="input-group">
+                    <label for="density">Asphalt Density (lbs/cu ft):</label>
+                    <input type="number" id="density" value="150" step="0.1"> <!-- Default common density -->
+                    <span class="unit-label">lbs/cu ft</span>
+                </div>
+            </div>
+
+            <button type="button" id="calculate-btn" class="calculator-button">Calculate Tons Required</button>
+            <button type="button" id="clear-btn" class="calculator-button clear-button">Clear</button> <!-- Added Clear button -->
+
+
+            <div class="calculator-result">
+                <h3>Estimated Asphalt Required:</h3>
+                <p id="result-tons">0.00 Tons</p> <!-- Result will be displayed here -->
+                <!-- Optional: Display result in other units -->
+                <!-- <p id="result-cubic-yards">0.00 Cubic Yards</p> -->
+            </div>
+
+            <!-- Note about accuracy -->
+            <p class="accuracy-note">Note: This calculation is an estimate. Actual material needed may vary based on compaction, waste, and specific mix properties. Consult a professional for precise figures.</p>
+
         </section>
 
         <!-- Section for Listing Different Calculator Types -->
         <section class="calculator-types-list">
-            <h2>Explore Specific Asphalt Calculators</h2>
+            <h2>Explore Other Specific Calculators</h2> <!-- Changed title slightly -->
 
-            <!-- Example H2 and Link for Cost Calculation -->
+            <!-- Example H3 and Link for Cost Calculation -->
             <div class="calculator-entry">
-                <h2>Asphalt Paving Cost Calculator</h2>
-                <p>Estimate the total cost of your asphalt paving project, considering material, labor, and other factors.</p>
+                <h3>Asphalt Paving Cost Calculator</h3> <!-- Changed to H3 -->
+                <p>Estimate the total cost of your asphalt paving project, considering material, labor, equipment, and other factors.</p> <!-- More detailed description -->
                 <a href="/asphalt-paving-cost-calculator" class="calculator-button">Asphalt Paving Cost Calculator</a>
             </div>
 
-            <!-- Example H2 and Link for Unit Conversion -->
+            <!-- Example H3 and Link for Unit Conversion -->
             <div class="calculator-entry">
-                <h2>Asphalt Square Yards to Tons Calculator</h2>
-                <p>Quickly convert asphalt quantities from square yards to tons for easier material planning.</p>
-                <a href="/asphalt-square-yards-to-tons-calculator" class="calculator-button">Asphalt Square Yards to Tons Calculator</a>
+                <h3>Asphalt Unit Conversion Tools</h3> <!-- Changed title to be broader -->
+                <p>Quickly convert asphalt quantities between different units like square yards, tons, cubic meters, etc., for easier material planning.</p> <!-- More detailed description -->
+                <!-- Link to a page that might contain multiple conversion tools or list them -->
+                <a href="/asphalt-unit-conversion-calculator" class="calculator-button">Asphalt Unit Conversion Tools</a>
             </div>
 
-            <!-- Example H2 and Link for Material Specific Calculation -->
+            <!-- Example H3 and Link for Material Specific Calculation -->
              <div class="calculator-entry">
-                <h2>Hot Asphalt Calculator</h2>
-                <p>Calculate the required amount of hot mix asphalt for your specific paving needs.</p>
-                <a href="/hot-asphalt-calculator" class="calculator-button">Hot Asphalt Calculator</a>
+                <h3>Hot Mix Asphalt Calculator</h3> <!-- Changed title slightly -->
+                <p>Calculate the required amount of hot mix asphalt for specific paving applications, considering typical densities.</p> <!-- More detailed description -->
+                <a href="/hot-mix-asphalt-calculator" class="calculator-button">Hot Mix Asphalt Calculator</a>
             </div>
 
-            <!-- Add more calculator entries following this pattern -->
-            <!-- Based on your list, you would add entries for: -->
-            <!-- Asphalt Millings Calculator -->
-            <!-- Crushed Asphalt Calculator -->
-            <!-- Cold Patch Asphalt Calculator -->
-            <!-- Asphalt Driveway Cost Calculator -->
-            <!-- Asphalt Driveway Repair Cost Calculator -->
-            <!-- Asphalt Removal Calculator -->
-            <!-- Asphalt Cost Calculator -->
-            <!-- Convert M3 to Tons Asphalt Calculator -->
-            <!-- Asphalt Calculator Square Feet to Tons -->
-            <!-- Driveway Asphalt Calculator -->
-            <!-- Paving Asphalt Calculator -->
-            <!-- ... and potentially others you identify ... -->
+            <!-- Add more calculator entries following this pattern, using H3 -->
+            <!-- Example: -->
+             <div class="calculator-entry">
+                <h3>Asphalt Millings Calculator</h3>
+                <p>Estimate the volume and weight of recycled asphalt pavement (RAP) or millings needed for base layers or other uses.</p>
+                <a href="/asphalt-millings-calculator" class="calculator-button">Asphalt Millings Calculator</a>
+            </div>
+             <div class="calculator-entry">
+                <h3>Cold Patch Asphalt Calculator</h3>
+                <p>Determine the quantity of cold patch asphalt needed for repairing potholes and small areas.</p>
+                <a href="/cold-patch-asphalt-calculator" class="calculator-button">Cold Patch Asphalt Calculator</a>
+            </div>
+            <!-- ... add others from your list ... -->
 
-            <!-- For location-specific cost calculators (Australia, NZ), you might link to specific pages or sections -->
-            <!-- For brand-specific terms, you would avoid creating H2s directly competing with the brand, but might mention them cautiously in descriptions on relevant pages -->
-            <!-- For "Asphalt Calculator App", you would state you offer an online tool, not an app -->
+        </section>
+
+        <!-- Section for Knowledge Base / Guides -->
+        <section class="knowledge-base">
+            <h2>Asphalt Calculation Guides & Resources</h2>
+            <p class="section-description">Go beyond the numbers. Learn more about asphalt properties, measurement techniques, and factors affecting your project.</p>
+
+            <div class="knowledge-entry">
+                <h3>Understanding Asphalt Density</h3>
+                <p>Different asphalt mixes have varying densities. Learn how this affects your calculations and common density values.</p>
+                <a href="/guide/asphalt-density" class="calculator-button secondary-button">Read Guide</a> <!-- Use a different button style -->
+            </div>
+
+             <div class="knowledge-entry">
+                <h3>Tips for Accurate Measurement</h3>
+                <p>Get practical advice on measuring your project area and thickness precisely to ensure accurate material estimates.</p>
+                <a href="/guide/accurate-measurement" class="calculator-button secondary-button">Read Guide</a>
+            </div>
+
+             <div class="knowledge-entry">
+                <h3>Frequently Asked Questions (FAQ)</h3>
+                <p>Find answers to common questions about using asphalt calculators and planning asphalt projects.</p>
+                <a href="/faq" class="calculator-button secondary-button">View FAQ</a>
+            </div>
+
+            <!-- Add more knowledge entries -->
 
         </section>
 
     </main>
 
     <footer>
-        <!-- Footer content: copyright, privacy policy, etc. -->
-        <p>&copy; 2023 Your Website Name. All rights reserved.</p>
+        <div class="container footer-content">
+            <p>&copy; 2023 Your Website Name. All rights reserved.</p>
+            <nav class="footer-nav">
+                <a href="/about">About Us</a> |
+                <a href="/privacy-policy">Privacy Policy</a> |
+                <a href="/terms-of-service">Terms of Service</a> |
+                <a href="/contact">Contact Us</a>
+            </nav>
+        </div>
     </footer>
+
+    <!-- Placeholder for JavaScript file -->
+    <!-- You will need a script.js file to handle the calculation logic -->
+    <script src="script.js"></script>
 
 </body>
 </html>
