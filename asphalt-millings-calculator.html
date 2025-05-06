@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asphalt Millings Calculator - Estimate RAP Volume & Weight</title>
+    <meta name="description" content="Estimate the volume and weight of recycled asphalt pavement (RAP) or millings needed for base layers or other uses with our free online calculator.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="site-logo">
+                 <img src="/path/to/your/logo.png" alt="Asphalt Calculator Logo">
+            </div>
+            <div class="site-branding">
+                 <h1 class="site-title">Asphalt Calculator</h1>
+                 <p class="site-tagline">Your Comprehensive Toolkit for Asphalt Project Estimation</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="calculator-form-section">
+            <h2>Asphalt Millings Calculator</h2>
+            <p class="section-description">Estimate the volume and weight of recycled asphalt pavement (RAP) or millings needed for your project.</p>
+
+            <!-- 计算器输入表单区域 - 沥青铣刨料计算器 -->
+            <div class="calculator-inputs">
+                <div class="input-group">
+                    <label for="millings-length">Length:</label>
+                    <input type="number" id="millings-length" placeholder="e.g., 50" required>
+                    <select id="millings-length-unit">
+                        <option value="feet">Feet</option>
+                        <option value="meters">Meters</option>
+                        <option value="yards">Yards</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="millings-width">Width:</label>
+                    <input type="number" id="millings-width" placeholder="e.g., 10" required>
+                     <select id="millings-width-unit">
+                        <option value="feet">Feet</option>
+                        <option value="meters">Meters</option>
+                        <option value="yards">Yards</option>
+                    </select>
+                </div>
+                 <div class="input-group">
+                    <label for="millings-thickness">Thickness:</label>
+                    <input type="number" id="millings-thickness" placeholder="e.g., 6" required>
+                     <select id="millings-thickness-unit">
+                        <option value="inches">Inches</option>
+                        <option value="feet">Feet</option>
+                        <option value="meters">Meters</option>
+                        <option value="yards">Yards</option>
+                        <option value="cm">CM</option>
+                    </select>
+                </div>
+                 <div class="input-group">
+                    <label for="millings-density">Millings Density (lbs/cu ft):</label>
+                    <input type="number" id="millings-density" value="120" step="0.1"> <!-- Typical millings density -->
+                    <span class="unit-label">lbs/cu ft</span>
+                </div>
+            </div>
+
+            <button type="button" id="calculate-millings-btn" class="calculator-button primary-button">Calculate Millings</button>
+            <button type="button" id="clear-millings-btn" class="calculator-button secondary-button">Clear</button>
+
+            <div class="calculator-result">
+                <h3>Estimated Millings Required:</h3>
+                <p id="result-millings-tons">0.00 Tons</p>
+                 <p id="result-millings-cuyd">0.00 Cubic Yards</p> <!-- Millings often measured in cubic yards -->
+            </div>
+
+             <p class="accuracy-note">Note: This calculation uses a typical millings density. Actual material needed may vary based on specific material properties and compaction.</p>
+
+        </section>
+
+         <!-- 内部链接区域 - 链接回首页和相关指南/计算器 -->
+         <section class="related-resources">
+             <h2>Related Resources & Tools</h2>
+             <p>Explore other helpful tools and guides for your asphalt project:</p>
+             <ul>
+                 <li><a href="index.html">Asphalt Material Quantity Calculator</a></li>
+                 <li><a href="asphalt-unit-converter.html">Asphalt Unit Conversion Tools</a></li>
+                 <li><a href="asphalt-density-guide.html">Understanding Asphalt Density Guide</a></li>
+                 <li><a href="measurement-tips.html">Tips for Accurate Measurement Guide</a></li>
+                 <li><a href="faq.html">Asphalt Calculation FAQ</a></li>
+                 <!-- 链接到其他可能相关的计算器 -->
+                 <li><a href="asphalt-cost-calculator.html">Asphalt Paving Cost Calculator</a></li>
+                 <li><a href="hot-mix-asphalt-calculator.html">Hot Mix Asphalt Calculator</a></li>
+                 <li><a href="cold-patch-asphalt-calculator.html">Cold Patch Asphalt Calculator</a></li>
+             </ul>
+         </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2023 Your Website Name. All rights reserved.</p>
+            <nav class="footer-nav">
+                <a href="/about">About Us</a> |
+                <a href="/privacy-policy">Privacy Policy</a> |
+                <a href="/terms-of-service">Terms of Service</a> |
+                <a href="/contact">Contact Us</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Placeholder for JavaScript file specific to this calculator -->
+    <script src="millings-calculator.js"></script>
+
+</body>
+</html>
