@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Mix Asphalt Calculator - Estimate HMA Quantity</title>
+    <meta name="description" content="Calculate the required amount of hot mix asphalt (HMA) for your paving project based on dimensions and typical HMA density.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="site-logo">
+                 <img src="/path/to/your/logo.png" alt="Asphalt Calculator Logo">
+            </div>
+            <div class="site-branding">
+                 <h1 class="site-title">Asphalt Calculator</h1>
+                 <p class="site-tagline">Your Comprehensive Toolkit for Asphalt Project Estimation</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="calculator-form-section">
+            <h2>Hot Mix Asphalt Calculator</h2>
+            <p class="section-description">Estimate the tons of hot mix asphalt (HMA) needed for your specific paving application.</p>
+
+            <!-- 计算器输入表单区域 - 热拌沥青计算器 -->
+            <div class="calculator-inputs">
+                <div class="input-group">
+                    <label for="hma-length">Length:</label>
+                    <input type="number" id="hma-length" placeholder="e.g., 100" required>
+                    <select id="hma-length-unit">
+                        <option value="feet">Feet</option>
+                        <option value="meters">Meters</option>
+                        <option value="yards">Yards</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="hma-width">Width:</label>
+                    <input type="number" id="hma-width" placeholder="e.g., 12" required>
+                     <select id="hma-width-unit">
+                        <option value="feet">Feet</option>
+                        <option value="meters">Meters</option>
+                        <option value="yards">Yards</option>
+                    </select>
+                </div>
+                 <div class="input-group">
+                    <label for="hma-thickness">Thickness:</label>
+                    <input type="number" id="hma-thickness" placeholder="e.g., 4" required>
+                     <select id="hma-thickness-unit">
+                        <option value="inches">Inches</option>
+                        <option value="feet">Feet</option>
+                        <option value="meters">Meters</option>
+                        <option value="yards">Yards</option>
+                        <option value="cm">CM</option>
+                    </select>
+                </div>
+                 <div class="input-group">
+                    <label for="hma-density">Hot Mix Density (lbs/cu ft):</label>
+                    <input type="number" id="hma-density" value="150" step="0.1"> <!-- Typical HMA density -->
+                    <span class="unit-label">lbs/cu ft</span>
+                </div>
+            </div>
+
+            <button type="button" id="calculate-hma-btn" class="calculator-button primary-button">Calculate HMA Tons</button>
+            <button type="button" id="clear-hma-btn" class="calculator-button secondary-button">Clear</button>
+
+            <div class="calculator-result">
+                <h3>Estimated Hot Mix Asphalt Required:</h3>
+                <p id="result-hma-tons">0.00 Tons</p>
+            </div>
+
+             <p class="accuracy-note">Note: This calculation uses a typical hot mix density. Actual material needed may vary based on specific mix properties and compaction.</p>
+
+        </section>
+
+         <!-- 内部链接区域 - 链接回首页和相关指南/计算器 -->
+         <section class="related-resources">
+             <h2>Related Resources & Tools</h2>
+             <p>Explore other helpful tools and guides for your asphalt project:</p>
+             <ul>
+                 <li><a href="index.html">Asphalt Material Quantity Calculator</a></li>
+                 <li><a href="asphalt-unit-converter.html">Asphalt Unit Conversion Tools</a></li>
+                 <li><a href="asphalt-density-guide.html">Understanding Asphalt Density Guide</a></li>
+                 <li><a href="measurement-tips.html">Tips for Accurate Measurement Guide</a></li>
+                 <li><a href="faq.html">Asphalt Calculation FAQ</a></li>
+                 <!-- 链接到其他可能相关的计算器 -->
+                 <li><a href="asphalt-cost-calculator.html">Asphalt Paving Cost Calculator</a></li>
+                 <li><a href="asphalt-millings-calculator.html">Asphalt Millings Calculator</a></li>
+                 <li><a href="cold-patch-asphalt-calculator.html">Cold Patch Asphalt Calculator</a></li>
+             </ul>
+         </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2023 Your Website Name. All rights reserved.</p>
+            <nav class="footer-nav">
+                <a href="/about">About Us</a> |
+                <a href="/privacy-policy">Privacy Policy</a> |
+                <a href="/terms-of-service">Terms of Service</a> |
+                <a href="/contact">Contact Us</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Placeholder for JavaScript file specific to this calculator -->
+    <script src="hot-mix-calculator.js"></script>
+
+</body>
+</html>
