@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold Patch Asphalt Calculator - Estimate Pothole Repair Material</title>
+    <meta name="description" content="Determine the quantity of cold patch asphalt needed for repairing potholes and small areas quickly with our free online calculator.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="site-logo">
+                 <img src="/path/to/your/logo.png" alt="Asphalt Calculator Logo">
+            </div>
+            <div class="site-branding">
+                 <h1 class="site-title">Asphalt Calculator</h1>
+                 <p class="site-tagline">Your Comprehensive Toolkit for Asphalt Project Estimation</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="calculator-form-section">
+            <h2>Cold Patch Asphalt Calculator</h2>
+            <p class="section-description">Estimate the amount of cold patch asphalt needed for repairing potholes and small areas.</p>
+
+            <!-- 计算器输入表单区域 - 冷补沥青计算器 -->
+            <div class="calculator-inputs">
+                <div class="input-group">
+                    <label for="pothole-length">Pothole Length:</label>
+                    <input type="number" id="pothole-length" placeholder="e.g., 2" required>
+                    <select id="pothole-length-unit">
+                        <option value="feet">Feet</option>
+                        <option value="inches">Inches</option>
+                        <option value="yards">Yards</option>
+                        <option value="meters">Meters</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="pothole-width">Pothole Width:</label>
+                    <input type="number" id="pothole-width" placeholder="e.g., 1.5" required>
+                     <select id="pothole-width-unit">
+                        <option value="feet">Feet</option>
+                        <option value="inches">Inches</option>
+                        <option value="yards">Yards</option>
+                        <option value="meters">Meters</option>
+                    </select>
+                </div>
+                 <div class="input-group">
+                    <label for="pothole-depth">Pothole Depth:</label>
+                    <input type="number" id="pothole-depth" placeholder="e.g., 3" required>
+                     <select id="pothole-depth-unit">
+                        <option value="inches">Inches</option>
+                        <option value="feet">Feet</option>
+                        <option value="cm">CM</option>
+                    </select>
+                </div>
+                 <div class="input-group">
+                    <label for="coldpatch-density">Cold Patch Density (lbs/cu ft):</label>
+                    <input type="number" id="coldpatch-density" value="135" step="0.1"> <!-- Typical cold patch density -->
+                    <span class="unit-label">lbs/cu ft</span>
+                </div>
+            </div>
+
+            <button type="button" id="calculate-coldpatch-btn" class="calculator-button primary-button">Calculate Cold Patch</button>
+            <button type="button" id="clear-coldpatch-btn" class="calculator-button secondary-button">Clear</button>
+
+            <div class="calculator-result">
+                <h3>Estimated Cold Patch Required:</h3>
+                <p id="result-coldpatch-lbs">0.00 lbs</p>
+                 <p id="result-coldpatch-tons">0.00 Tons</p>
+                 <!-- Cold patch is often sold in bags, you might add a conversion here -->
+                 <!-- <p id="result-coldpatch-bags">~0 Bags (assuming X lbs/bag)</p> -->
+            </div>
+
+             <p class="accuracy-note">Note: This calculation uses a typical cold patch density. Actual material needed may vary based on specific product and application method.</p>
+
+        </section>
+
+         <!-- 内部链接区域 - 链接回首页和相关指南/计算器 -->
+         <section class="related-resources">
+             <h2>Related Resources & Tools</h2>
+             <p>Explore other helpful tools and guides for your asphalt project:</p>
+             <ul>
+                 <li><a href="index.html">Asphalt Material Quantity Calculator</a></li>
+                 <li><a href="asphalt-unit-converter.html">Asphalt Unit Conversion Tools</a></li>
+                 <li><a href="asphalt-density-guide.html">Understanding Asphalt Density Guide</a></li>
+                 <li><a href="measurement-tips.html">Tips for Accurate Measurement Guide</a></li>
+                 <li><a href="faq.html">Asphalt Calculation FAQ</a></li>
+                 <!-- 链接到其他可能相关的计算器 -->
+                 <li><a href="asphalt-cost-calculator.html">Asphalt Paving Cost Calculator</a></li>
+                 <li><a href="hot-mix-asphalt-calculator.html">Hot Mix Asphalt Calculator</a></li>
+                 <li><a href="asphalt-millings-calculator.html">Asphalt Millings Calculator</a></li>
+             </ul>
+         </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2023 Your Website Name. All rights reserved.</p>
+            <nav class="footer-nav">
+                <a href="/about">About Us</a> |
+                <a href="/privacy-policy">Privacy Policy</a> |
+                <a href="/terms-of-service">Terms of Service</a> |
+                <a href="/contact">Contact Us</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Placeholder for JavaScript file specific to this calculator -->
+    <script src="cold-patch-calculator.js"></script>
+
+</body>
+</html>
