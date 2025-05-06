@@ -1,25 +1,106 @@
-/* Style for the new image gallery section */
-.image-gallery-section {
-    /* 继承 .section 的样式 */
-    background-color: #fff;
+/* Basic Reset */
+body, h1, h2, h3, p, a, button, label, select, input, div, section, main, header, footer, nav, img { /* Added h3, input, nav, img */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Use a clean sans-serif font, Roboto is okay, or system fonts for a more native feel */
+    font-family: 'Roboto', Arial, sans-serif; /* Or: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+    line-height: 1.6;
+    color: #333; /* Dark gray text */
+    /* Very light, clean background */
+    background-color: #f8f8f8; /* Lighter background */
+    padding-top: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Header - Clean White Header with Shadow */
+.site-header {
+    background-color: #fff; /* White header */
+    color: #333; /* Dark text */
+    padding: 15px 0; /* Slightly less padding */
+    margin-bottom: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* More prominent shadow for depth */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.site-logo img {
+    height: 40px; /* Adjust logo size */
+    margin-right: 15px; /* Space between logo and title */
+}
+
+/* Optional: Style for text logo if used */
+.site-logo .logo-text {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #007aff; /* Use primary accent color for text logo */
+    margin-right: 15px;
+}
+
+
+.site-branding {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.site-title {
+    color: #1a1a1a; /* Very dark gray/almost black */
+    margin-bottom: 3px; /* Less space below title */
+    font-size: 2.2em; /* Slightly smaller title in header */
+    font-weight: 700;
+}
+
+.site-tagline {
+    font-size: 1em;
+    color: #555; /* Medium gray for tagline */
+}
+
+/* Main content area */
+main {
+    flex-grow: 1;
+    padding-bottom: 40px;
+}
+
+
+/* Sections - Clean White Cards with Subtle Shadow */
+section {
+    background-color: #fff; /* White background */
     padding: 30px;
     margin-bottom: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border: none; /* Remove border */
+    border-radius: 8px; /* More rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Softer, larger shadow */
 }
 
-.image-gallery-section h2 {
-     /* 继承 section h2 的样式 */
-     color: #1a1a1a;
-     margin-bottom: 20px;
-     font-size: 2em;
-     font-weight: 700;
-     text-align: center;
-     border-bottom: 2px solid #007aff; /* Primary accent blue underline */
-     padding-bottom: 10px;
+section h2 {
+    color: #1a1a1a; /* Very dark gray */
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 2px solid #007aff; /* Primary accent blue underline */
+    padding-bottom: 10px;
 }
 
-.image-gallery-section .section-description {
+.section-description {
     text-align: center;
     margin-bottom: 30px;
     color: #555;
@@ -27,44 +108,375 @@
 }
 
 
-/* Style for the image grid container */
-.image-grid {
+/* Embedded Calculator Form Section */
+.asphalt-calculator-form {
+    /* Specific styles for the main calculator section */
+}
+
+.calculator-inputs {
     display: grid;
-    /* Define grid columns: 3 columns on larger screens, adjust as needed */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust minmax based on desired image size */
-    gap: 20px; /* Space between images */
-    justify-items: center; /* Center items within grid cells */
-    align-items: center; /* Vertically center items */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
 }
 
-/* Style for individual images within the grid */
-.image-grid img {
-    display: block; /* Remove extra space below image */
-    width: 100%; /* Make image fill its grid cell */
-    max-width: 300px; /* Optional: Limit max width */
-    height: auto; /* Allow height to adjust proportionally */
-    border-radius: 5px; /* Optional: add slight rounded corners to images */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Optional: subtle shadow on images */
-    object-fit: cover; /* Ensure image covers the area without distortion if height is set */
-    /* If you want fixed height and cover: */
-    /* height: 180px; */
+.input-group {
+    display: flex;
+    flex-direction: column;
 }
 
-/* Responsive adjustments for the grid */
+.input-group label {
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.input-group input[type="number"],
+.input-group select {
+    padding: 10px;
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on focus */
+}
+
+.input-group input[type="number"]:focus,
+.input-group select:focus {
+    border-color: #007aff; /* Highlight border with primary blue on focus */
+    box-shadow: 0 0 5px rgba(0, 122, 255, 0.3); /* Subtle blue shadow on focus */
+    outline: none; /* Remove default outline */
+}
+
+
+.input-group input[type="number"] {
+     flex-grow: 1;
+     margin-right: 5px;
+}
+
+.input-group select {
+    width: auto;
+}
+
+.input-group .unit-label {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 5px;
+}
+
+
+/* Buttons - Distinct Styles */
+.calculator-button {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 6px; /* More rounded buttons */
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    text-align: center; /* Ensure text is centered */
+}
+
+.calculator-button:last-child {
+    margin-right: 0;
+}
+
+/* Primary Button (Calculate) - Vibrant Blue */
+.primary-button {
+    background-color: #007aff; /* Apple Blue */
+    color: #fff;
+}
+
+.primary-button:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+}
+
+/* Secondary Button (Clear) - Outline Style */
+.secondary-button {
+    background-color: transparent; /* Transparent background */
+    color: #007aff; /* Blue text */
+    border: 2px solid #007aff; /* Blue border */
+}
+
+.secondary-button:hover {
+    background-color: rgba(0, 122, 255, 0.1); /* Subtle blue background on hover */
+    color: #007aff; /* Keep text blue */
+}
+
+/* Tertiary Buttons (Links to other calculators/guides) - Softer Gray or Outline */
+.tertiary-button {
+    background-color: #e9e9eb; /* Light gray background */
+    color: #1a1a1a; /* Dark text */
+    border: none;
+}
+
+.tertiary-button:hover {
+    background-color: #dcdce0; /* Slightly darker gray on hover */
+}
+
+
+.calculator-result {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #eef7ff; /* Very light blue background */
+    border: 1px solid #b3d9ff; /* Light blue border */
+    border-radius: 4px;
+    text-align: center;
+}
+
+.calculator-result h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+    font-size: 1.6em;
+}
+
+.calculator-result p {
+    font-size: 2em;
+    font-weight: 700;
+    color: #007aff; /* Use primary blue for result */
+    /* Optional: Use a success green if preferred */
+    /* color: #28a745; */
+}
+
+.accuracy-note {
+    font-size: 0.9em;
+    color: #777;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* Individual Calculator Entry */
+.calculator-types-list h2 {
+     border-bottom-color: #007aff; /* Consistent primary blue underline */
+}
+
+.calculator-entry {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee; /* Light separator line */
+}
+
+.calculator-entry:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.calculator-entry h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #1a1a1a; /* Very dark gray */
+    font-weight: 700;
+    text-align: left;
+}
+
+.calculator-entry p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+/* Knowledge Base Section */
+.knowledge-base h2 {
+    border-bottom-color: #007aff; /* Consistent primary blue underline */
+}
+
+.knowledge-entry {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.knowledge-entry:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.knowledge-entry h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+    font-weight: 700;
+    text-align: left;
+}
+
+.knowledge-entry p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+
+/* Footer - Clean Dark Footer */
+footer {
+    margin-top: auto;
+    padding: 25px 0;
+    background-color: #222; /* Dark gray footer */
+    color: #bbb; /* Lighter gray text */
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+}
+
+.footer-nav a {
+    color: #bbb; /* Lighter gray links */
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #fff; /* White on hover */
+    text-decoration: underline;
+}
+
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .image-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    .site-header {
+        padding: 15px 0;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .site-logo img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+     .site-logo .logo-text {
+        margin-right: 0;
+        margin-bottom: 10px;
+     }
+
+
+    .site-branding {
+        text-align: center;
+    }
+
+    .site-title {
+        font-size: 2em;
+    }
+
+    .site-tagline {
+        font-size: 1em;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    .section-description {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    .calculator-inputs {
+        grid-template-columns: 1fr;
         gap: 15px;
     }
-     /* If using fixed height */
-     /* .image-grid img { height: 120px; } */
+
+    .input-group input[type="number"],
+    .input-group select {
+         width: auto;
+         flex-grow: 0;
+         margin-right: 0;
+    }
+
+     .input-group {
+        flex-direction: row; /* Arrange label and input side-by-side */
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+     }
+
+     .input-group label {
+        margin-bottom: 0;
+        margin-right: 10px;
+     }
+
+     .input-group input[type="number"],
+     .input-group select {
+         flex-basis: 150px;
+     }
+
+
+    .calculator-button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .calculator-button:last-child {
+         margin-bottom: 0;
+    }
+
+    .calculator-result h3 {
+        font-size: 1.4em;
+    }
+
+    .calculator-result p {
+        font-size: 1.8em;
+    }
+
+    .calculator-entry h3,
+    .knowledge-entry h3 {
+        font-size: 1.3em;
+    }
+
+    .footer-nav a {
+        margin: 0 5px;
+    }
 }
 
- @media (max-width: 480px) {
-    .image-grid {
-        grid-template-columns: 1fr; /* Stack images on very small screens */
-        gap: 10px;
+@media (max-width: 480px) {
+     .site-title {
+        font-size: 1.8em;
     }
-     /* If using fixed height */
-     /* .image-grid img { height: 150px; } */
+    .site-tagline {
+        font-size: 0.9em;
+    }
+    section h2 {
+        font-size: 1.6em;
+    }
+     .calculator-result p {
+        font-size: 1.5em;
+    }
+     .calculator-entry h3,
+    .knowledge-entry h3 {
+        font-size: 1.2em;
+    }
+     .input-group {
+        flex-direction: column; /* Stack label and input again on very small screens */
+        align-items: flex-start;
+     }
+     .input-group label {
+        margin-right: 0;
+        margin-bottom: 5px;
+     }
+     .input-group input[type="number"],
+     .input-group select {
+         width: 100%; /* Full width again */
+         flex-basis: auto;
+     }
 }
