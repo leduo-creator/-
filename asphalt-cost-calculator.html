@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asphalt Paving Cost Calculator - Estimate Your Project Budget</title>
+    <meta name="description" content="Use our free online Asphalt Paving Cost Calculator to estimate material, labor, and equipment costs for your asphalt paving project. Get a budget estimate now.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="site-logo">
+                 <img src="/path/to/your/logo.png" alt="Asphalt Calculator Logo">
+            </div>
+            <div class="site-branding">
+                 <h1 class="site-title">Asphalt Calculator</h1>
+                 <p class="site-tagline">Your Comprehensive Toolkit for Asphalt Project Estimation</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="calculator-form-section">
+            <h2>Asphalt Paving Cost Calculator</h2>
+            <p class="section-description">Estimate the total cost of your asphalt paving project by entering project details and local costs.</p>
+
+            <!-- 计算器输入表单区域 - 成本计算器 -->
+            <div class="calculator-inputs">
+                <div class="input-group">
+                    <label for="cost-area">Project Area:</label>
+                    <input type="number" id="cost-area" placeholder="e.g., 1000" required>
+                    <select id="cost-area-unit">
+                        <option value="sq_ft">Sq Ft</option>
+                        <option value="sq_yd">Sq Yd</option>
+                        <option value="sq_m">Sq M</option>
+                    </select>
+                </div>
+                 <div class="input-group">
+                    <label for="cost-thickness">Thickness:</label>
+                    <input type="number" id="cost-thickness" placeholder="e.g., 4" required>
+                     <select id="cost-thickness-unit">
+                        <option value="inches">Inches</option>
+                        <option value="feet">Feet</option>
+                        <option value="cm">CM</option>
+                    </select>
+                </div>
+                 <div class="input-group">
+                    <label for="material-cost-per-ton">Material Cost per Ton ($):</label>
+                    <input type="number" id="material-cost-per-ton" value="50" step="0.01" required>
+                 </div>
+                 <div class="input-group">
+                    <label for="labor-cost-per-sqyd">Labor Cost per Sq Yd ($):</label>
+                    <input type="number" id="labor-cost-per-sqyd" value="10" step="0.01">
+                 </div>
+                  <div class="input-group">
+                    <label for="equipment-cost">Equipment Cost ($):</label>
+                    <input type="number" id="equipment-cost" value="500" step="0.01">
+                 </div>
+                 <!-- 你可以根据需要添加更多输入项 -->
+            </div>
+
+            <button type="button" id="calculate-cost-btn" class="calculator-button primary-button">Calculate Cost</button>
+            <button type="button" id="clear-cost-btn" class="calculator-button secondary-button">Clear</button>
+
+            <div class="calculator-result">
+                <h3>Estimated Project Cost:</h3>
+                <p id="result-cost">$0.00</p>
+            </div>
+
+             <p class="accuracy-note">Note: This is an estimate. Actual costs may vary based on location, specific contractor rates, project complexity, and unforeseen issues. Always get multiple quotes from local professionals.</p>
+
+        </section>
+
+         <!-- 内部链接区域 - 链接回首页和相关指南/计算器 -->
+         <section class="related-resources">
+             <h2>Related Resources & Tools</h2>
+             <p>Explore other helpful tools and guides for your asphalt project:</p>
+             <ul>
+                 <li><a href="index.html">Asphalt Material Quantity Calculator</a></li>
+                 <li><a href="asphalt-unit-converter.html">Asphalt Unit Conversion Tools</a></li>
+                 <li><a href="asphalt-density-guide.html">Understanding Asphalt Density Guide</a></li>
+                 <li><a href="measurement-tips.html">Tips for Accurate Measurement Guide</a></li>
+                 <li><a href="faq.html">Asphalt Calculation FAQ</a></li>
+                 <!-- 链接到其他可能相关的计算器 -->
+                 <li><a href="hot-mix-asphalt-calculator.html">Hot Mix Asphalt Calculator</a></li>
+                 <li><a href="asphalt-millings-calculator.html">Asphalt Millings Calculator</a></li>
+                 <li><a href="cold-patch-asphalt-calculator.html">Cold Patch Asphalt Calculator</a></li>
+             </ul>
+         </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2023 Your Website Name. All rights reserved.</p>
+            <nav class="footer-nav">
+                <a href="/about">About Us</a> |
+                <a href="/privacy-policy">Privacy Policy</a> |
+                <a href="/terms-of-service">Terms of Service</a> |
+                <a href="/contact">Contact Us</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Placeholder for JavaScript file specific to this calculator -->
+    <script src="cost-calculator.js"></script>
+
+</body>
+</html>
