@@ -255,19 +255,6 @@ section h2 {
      border-bottom-color: #007aff; /* Consistent primary blue underline */
 }
 
-/* --- ADDED: Center content within calculator entries --- */
-.calculator-entry h3,
-.calculator-entry p {
-    text-align: center; /* Center text */
-}
-
-.calculator-entry a.calculator-button {
-    display: block; /* Make button a block element */
-    margin: 15px auto 0 auto; /* Center button horizontally */
-    width: fit-content; /* Button width fits content */
-}
-/* --- END ADDED --- */
-
 .calculator-entry {
     margin-bottom: 25px;
     padding-bottom: 25px;
@@ -285,33 +272,18 @@ section h2 {
     margin-bottom: 10px;
     color: #1a1a1a; /* Very dark gray */
     font-weight: 700;
-    text-align: left; /* Keep H3 left-aligned as it's the entry title */
+    text-align: left;
 }
 
 .calculator-entry p {
     margin-bottom: 15px;
     color: #666;
-    text-align: center; /* Center description */
 }
-
 
 /* Knowledge Base Section */
 .knowledge-base h2 {
     border-bottom-color: #007aff; /* Consistent primary blue underline */
 }
-
-/* --- ADDED: Center content within knowledge entries --- */
-.knowledge-entry h3,
-.knowledge-entry p {
-    text-align: center; /* Center text */
-}
-
-.knowledge-entry a.calculator-button {
-    display: block; /* Make button a block element */
-    margin: 15px auto 0 auto; /* Center button horizontally */
-    width: fit-content; /* Button width fits content */
-}
-/* --- END ADDED --- */
 
 .knowledge-entry {
     margin-bottom: 25px;
@@ -330,13 +302,12 @@ section h2 {
     margin-bottom: 10px;
     color: #1a1a1a;
     font-weight: 700;
-    text-align: left; /* Keep H3 left-aligned as it's the entry title */
+    text-align: left;
 }
 
 .knowledge-entry p {
     margin-bottom: 15px;
     color: #666;
-    text-align: center; /* Center description */
 }
 
 
@@ -344,8 +315,8 @@ section h2 {
 footer {
     margin-top: auto;
     padding: 25px 0;
-    background-color: #2c3e50; /* Dark blue-gray footer */
-    color: #bdc3c7; /* Light gray text */
+    background-color: #222; /* Dark gray footer */
+    color: #bbb; /* Lighter gray text */
     font-size: 0.9rem;
     text-align: center;
 }
@@ -361,7 +332,7 @@ footer {
 }
 
 .footer-nav a {
-    color: #bdc3c7; /* Lighter gray links */
+    color: #bbb; /* Lighter gray links */
     text-decoration: none;
     margin: 0 10px;
     transition: color 0.3s ease;
